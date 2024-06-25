@@ -14,4 +14,7 @@ describe("calculator", () => {
   test("unkown number of arguments", () => {
     expect(calculate("1,2,5,7")).toBe(15);
   });
+  test("newline as separator", () => {
+    expect(calculate("1\n2,3")).toBe(6);
+  });
 });
