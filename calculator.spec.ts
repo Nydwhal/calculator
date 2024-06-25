@@ -21,4 +21,7 @@ describe("calculator", () => {
     const calc = () => calculate("1,");
     expect(calc).toThrow(Error);
   });
+  test("custom separator", () => {
+    expect(calculate("//;\n1;2")).toBe(3);
+  });
 });
