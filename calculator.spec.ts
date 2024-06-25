@@ -11,4 +11,7 @@ describe("calculator", () => {
   test("two numbers", () => {
     expect(calculate("1,2")).toBe(3);
   });
+  test("unkown number of arguments", () => {
+    expect(calculate("1,2,5,7")).toBe(15);
+  });
 });
