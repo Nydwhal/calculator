@@ -17,4 +17,8 @@ describe("calculator", () => {
   test("newline as separator", () => {
     expect(calculate("1\n2,3")).toBe(6);
   });
+  test("not allow separators at the end", () => {
+    const calc = () => calculate("1,");
+    expect(calc).toThrow(Error);
+  });
 });
