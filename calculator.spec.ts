@@ -8,4 +8,7 @@ describe("calculator", () => {
   test("single number", () => {
     expect(calculate("1")).toBe(1);
   });
+  test("two numbers", () => {
+    expect(calculate("1,2")).toBe(3);
+  });
 });
