@@ -19,12 +19,12 @@ export const calculate = (input: string): number => {
     input = input.split(separator).join(",");
   }
 
-  if (input.includes("-")) {
-    const negatives = input
-      .split(",")
-      .filter((n) => n.includes("-"))
-      .map((n) => Number(n))
-      .join(",");
+  const negatives = input
+    .split(",")
+    .filter((n) => n.includes("-"))
+    .map((n) => Number(n))
+    .join(",");
+  if (negatives !== "") {
     throw new Error(`Negatives not allowed: ${negatives}`);
   }
 
