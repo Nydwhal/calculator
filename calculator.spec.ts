@@ -27,4 +27,8 @@ describe("calculator", () => {
     expect(calculate("//sep\n2sep5")).toBe(7);
     expect(() => calculate("//|\n1|2,3")).toThrow(Error);
   });
+  test("negative numbers", () => {
+    const calc = () => calculate("1,-2");
+    expect(calc).toThrow(Error);
+  });
 });
