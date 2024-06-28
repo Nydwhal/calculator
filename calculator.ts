@@ -6,7 +6,7 @@ export const calculate = (input: string): number => {
     throw new Error("Not allowed separators at the end");
   }
   if (input.startsWith("//")) {
-    input = input.slice(3).replace(input[2], ",");
+    input = input.slice(4).split(input[2]).join(",");
   }
   return input
     .replace("\n", ",")
